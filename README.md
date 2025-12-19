@@ -7,6 +7,9 @@ A responsive frontend clone of a modern e-commerce website homepage. This projec
 * **No official brand logos are used.** The logo has been replaced with a generic text placeholder.
 * **No proprietary product images are used.** All product and hero images have been replaced with generic placeholders (via `placehold.co`) to prevent copyright infringement and hotlinking issues.
 
+# LIVE DEMO
+https://dynamic3728k.github.io/e-commerce-website-homepage/
+
 ##  Features
 * **Responsive Navbar:** Includes search bar, location placeholder, and cart icon.
 * **Hero Image Carousel:** Automatic sliding banner with manual previous/next controls.

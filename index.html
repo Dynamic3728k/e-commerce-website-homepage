@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Demo Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" id="sidebar-close" class="closebtn">&times;</a>
+
+        <div class="sidebar-header">
+            <i class="fa-solid fa-circle-user"></i> Hello, sign in
+        </div>
+
+        <div class="sidebar-content">
+            <h3>Trending</h3>
+            <a href="#">Best Sellers</a>
+            <a href="#">New Releases</a>
+            <a href="#">Movers and Shakers</a>
+
+            <div class="separator"></div>
+
+            <h3>Digital Content & Devices</h3>
+            <a href="#">Smart Speakers <i class="fa-solid fa-chevron-right" style="float:right; font-size: 0.8rem; color:#888;"></i></a>
+            <a href="#">TV Sticks <i class="fa-solid fa-chevron-right" style="float:right; font-size: 0.8rem; color:#888;"></i></a>
+            <a href="#">E-Readers & eBooks <i class="fa-solid fa-chevron-right" style="float:right; font-size: 0.8rem; color:#888;"></i></a>
+            <a href="#">Audiobooks <i class="fa-solid fa-chevron-right" style="float:right; font-size: 0.8rem; color:#888;"></i></a>
+            <a href="#">Video Streaming <i class="fa-solid fa-chevron-right" style="float:right; font-size: 0.8rem; color:#888;"></i></a>
+            <a href="#">Music Streaming <i class="fa-solid fa-chevron-right" style="float:right; font-size: 0.8rem; color:#888;"></i></a>
+            
+            <div class="separator"></div>
+
+            <h3>Shop by Category</h3>
+            <a href="#">Mobiles, Computers <i class="fa-solid fa-chevron-right" style="float:right; font-size: 0.8rem; color:#888;"></i></a>
+            <a href="#">TV, Appliances, Electronics <i class="fa-solid fa-chevron-right" style="float:right; font-size: 0.8rem; color:#888;"></i></a>
+            <a href="#">Men's Fashion <i class="fa-solid fa-chevron-right" style="float:right; font-size: 0.8rem; color:#888;"></i></a>
+            <a href="#">Women's Fashion <i class="fa-solid fa-chevron-right" style="float:right; font-size: 0.8rem; color:#888;"></i></a>
+        </div>
+    </div>
+
+
+    <header>
+        <nav class="navbar-top">
+            <div class="nav-item nav-logo">
+                <img src="https://placehold.co/100x30/232f3e/ffffff?text=MyStore" alt="Store Logo">
+            </div>
+
+            <div class="nav-item nav-location">
+                <i class="fa-solid fa-location-dot icon-small"></i>
+                <div>
+                    <p class="nav-top-line">Deliver to</p>
+                    <p class="nav-bottom-line">India</p>
+                </div>
+            </div>
+
+            <div class="nav-search-container">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input type="text" class="search-input" placeholder="Search products">
+                <button class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="nav-item nav-flag">
+               <span class="flag-icon">🇮🇳</span>
+               <span class="nav-bottom-line">EN</span>
+            </div>
+
+            <div class="nav-item nav-account">
+                <p class="nav-top-line">Hello, sign in</p>
+                <p class="nav-bottom-line">Account & Lists <i class="fa-solid fa-caret-down"></i></p>
+            </div>
+
+            <div class="nav-item nav-orders">
+                <p class="nav-top-line">Returns</p>
+                <p class="nav-bottom-line">& Orders</p>
+            </div>
+
+            <div class="nav-item nav-cart">
+                <i class="fa-solid fa-cart-shopping icon-large"></i>
+                <span class="cart-count">0</span>
+                <span class="nav-bottom-line">Cart</span>
+            </div>
+        </nav>
+
+        <nav class="navbar-bottom">
+            <ul>
+                <li id="sidebar-trigger"><i class="fa-solid fa-bars"></i> All</li>
+                <li>MiniTV</li>
+                <li>Sell</li>
+                <li>Best Sellers</li>
+                <li>Mobiles</li>
+                <li>Today's Deals</li>
+                <li>Customer Service</li>
+                <li>Electronics</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <img src="https://placehold.co/1500x600/e0e0e0/333333?text=Big+Sale+Banner+1" class="hero-img active" alt="Hero 1">
+            <img src="https://placehold.co/1500x600/d0d0d0/333333?text=New+Arrivals+Banner" class="hero-img" alt="Hero 2">
+            <img src="https://placehold.co/1500x600/c0c0c0/333333?text=Electronics+Showcase" class="hero-img" alt="Hero 3">
+            <img src="https://placehold.co/1500x600/b0b0b0/333333?text=Home+Decor+Special" class="hero-img" alt="Hero 4">
+            <img src="https://placehold.co/1500x600/a0a0a0/333333?text=Fashion+Trends+2025" class="hero-img" alt="Hero 5">    
+
+            <button class="hero-btn btn-left" id="hero-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="hero-btn btn-right" id="hero-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+
+        <div class="content-grid">
+            
+            <div class="product-card">
+                <h2>Revamp your home in style</h2>
+                <div class="card-image-quad">
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Cushions" alt="img">
+                        <span>Cushion Cover, Bedsheets</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Vases" alt="img">
+                        <span>Figurines & Vases</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Storage" alt="img">
+                        <span>Home Storage</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Lighting" alt="Washer">
+                        <span>Lighting Solutions</span>
+                    </div>
+                </div>
+                <a href="#" class="see-more-link">Explore all</a>
+               
+            </div>
+
+            <div class="product-card">
+                <h2>Appliances for your home</h2>
+                <div class="card-image-quad">
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=AC" alt="AC">
+                        <span>Air conditioners</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Fridge" alt="Fridge">
+                        <span>Refrigerators</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Microwave" alt="Microwave">
+                        <span>Microwaves</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Washing+Machine" alt="Washer">
+                        <span>Washing Machines</span>
+                    </div>
+                </div>
+                <a href="#" class="see-more-link">See more</a>
+            </div>
+
+             <div class="product-card">
+                <h2>Up to 60% off | Styles for Men</h2>
+                <div class="card-image-single" style="background-image: url('https://placehold.co/300x300?text=Mens+Fashion');"></div>
+                <a href="#" class="see-more-link">See all offers</a>
+            </div>
+
+             <div class="product-card">
+                <h2>Starting ₹1149 | Headphones</h2>
+                <div class="card-image-single" style="background-image: url('https://placehold.co/300x300?text=Headphones');"></div>
+                <a href="#" class="see-more-link">See all offers</a>
+            </div>
+            
+             <div class="product-card">
+                <h2>Automotive essentials | upto 40% off</h2>
+                <div class="card-image-quad">
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Cleaning" alt="cleaning">
+                        <span>Cleaning Accessories</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Tyres" alt="care">
+                        <span>Tyre & Rim care</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Helmets" alt="helmet">
+                        <span>Helmet</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Vacuum" alt="Washer">
+                        <span>Vacuum cleaner</span>
+                    </div>
+                </div>
+                <a href="#" class="see-more-link">See more</a>
+            </div>
+
+
+            <div class="product-card">
+                <h2>Best Sellers in Beauty</h2>
+                <div class="card-image-quad">
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Soaps" alt="soap">
+                        <span>Soaps & Body washes</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Face+Wash" alt="care">
+                        <span>Cleanser & Face wash</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Moisturizer" alt="moisturizer">
+                        <span>Body Moisturizer</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Serum" alt="sermum">
+                        <span>Serum</span>
+                    </div>
+                </div>
+                <a href="#" class="see-more-link">See more</a>
+            </div>
+
+
+
+            <div class="product-card"><h2>Bulk order discounts</h2>
+                <div class="card-image-quad">
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Laptops" alt="lappi">
+                        <span>Up to 40 % off | laptops</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Kitchen" alt="care">
+                        <span>Up to 40 % off | Kitchen</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Furniture" alt="moisturizer">
+                        <span>Min. 50 % off | Furniture</span>
+                    </div>
+                    <div class="quad-item">
+                        <img src="https://placehold.co/186x116?text=Business" alt="sermum">
+                        <span>Up to 60 % off | Business</span>
+                    </div>
+                </div>
+                <a href="#" class="see-more-link">See more</a>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image-single" style="background-image: url('https://placehold.co/300x300?text=Gaming+Laptop');"></div>
+
+                <div class="product-details">
+    <a href="#" class="product-title">
+        High Performance Gaming Laptop 16" QHD IPS 165Hz...
+    </a>
+
+    <div class="product-rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-count">2</span>
+    </div>
+
+    <div class="product-price">
+        <span class="currency-symbol">₹</span>
+        <span class="price-whole">3,76,990</span>
+        <span class="price-decimal">.00</span>
+    </div>
+
+    <div class="delivery-info">
+        Get it by <span class="delivery-date">Friday, December 19</span>
+    </div>
+  
+</div>
+                <a href="#" class="see-more-link">See more</a>
+            </div>
+
+        </div> <div class="horizontal-section-container">
+            <h2 class="section-title">Today's Deals</h2>
+            <div class="horizontal-scroll-box">
+                <div class="h-item"><img src="https://placehold.co/150x200?text=Deal+1"></div>
+                <div class="h-item"><img src="https://placehold.co/150x200?text=Deal+2"></div>
+                <div class="h-item"><img src="https://placehold.co/150x200?text=Deal+3"></div>
+                <div class="h-item"><img src="https://placehold.co/150x200?text=Deal+4"></div>
+                <div class="h-item"><img src="https://placehold.co/150x200?text=Deal+5"></div>
+                <div class="h-item"><img src="https://placehold.co/150x200?text=Deal+6"></div>
+                <div class="h-item"><img src="https://placehold.co/150x200?text=Deal+7"></div>
+                <div class="h-item"><img src="https://placehold.co/150x200?text=Deal+8"></div>
+                <div class="h-item"><img src="https://placehold.co/150x200?text=Deal+9"></div>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer>
+    <div class="footer-back-to-top">
+        <a href="#top">Back to top</a> </div>
+
+    <div class="footer-main-links">
+        <div class="footer-grid-container">
+            <div class="footer-col">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">Science</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="#">Sell on our Store</a></li>
+                    <li><a href="#">Sell under Accelerator</a></li>
+                    <li><a href="#">Protect and Build Your Brand</a></li>
+                    <li><a href="#">Global Selling</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Fulfilment Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">COVID-19 Updates</a></li>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Returns Centre</a></li>
+                    <li><a href="#">Purchase Protection</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-line-separator"></div>
+
+    <div class="footer-middle-section">
+        <div class="footer-logo-container">
+             <img src="https://placehold.co/80x25/232f3e/ffffff?text=MyStore" alt="Logo">
+        </div>
+        <div class="footer-selectors">
+            <div class="selector-box"><i class="fa-solid fa-globe"></i> English</div>
+            <div class="selector-box">🇮🇳 India</div>
+        </div>
+    </div>
+
+    <div class="footer-bottom-section">
+        <div class="footer-bottom-links">
+            <a href="#">Books</a>
+            <a href="#">Web Services</a>
+            <a href="#">Audiobooks</a>
+            <a href="#">Reviews</a>
+            <a href="#">Movies</a>
+            <a href="#">Fashion</a>
+            <a href="#">Business</a>
+            <a href="#">Now Delivery</a>
+            <a href="#">Prime Music</a>
+        </div>
+
+        <div class="footer-copyright">
+            <ul>
+                <li><a href="#">Conditions of Use & Sale</a></li>
+                <li><a href="#">Privacy Notice</a></li>
+                <li><a href="#">Interest-Based Ads</a></li>
+            </ul>
+            <p>© 2024 MyStore, Inc. or its affiliates</p>
+            <p style="margin-top: 10px; color: #f28900; font-weight: bold;"><i>Created by GULSHAN KUMAR</i></p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
